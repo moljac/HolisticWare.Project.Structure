@@ -1,0 +1,42 @@
+%YAML 1.2
+---
+name: Project
+version: "0.0.0.1"
+id: holisticware-project
+summary: Charting library for Android applications.
+publisher: HolisticWare LLC
+publisher-url: http://holisticware.net/
+getting-started: ./GettingStarted.md
+details: ./Details.md
+license: ./License.md
+icons:
+  - ./icons/icon_128x128.png
+  - ./icons/icon_512x512.png
+screenshots:
+  - ./screenshots/screenshot_01.png
+  - ./screenshots/screenshot_01.png
+  - ./screenshots/screenshot_01.png
+build:
+  - ../source/Project.sln
+  - ../samples/Project.sln
+#---------------------------------------------------------------------------
+# names - identical - for bite-and-switch
+libraries:
+  android:
+    - ../source/Project/bin/Release/Project.dll
+  ios:
+  	- ../src//classic/AnyCPU/Release/Project.dll
+  ios-unified:
+    - ../src//unified/AnyCPU/Release/Project.dll
+
+#---------------------------------------------------------------------------
+samples:
+# http://code.metager.de/source/xref/github/Akavache/component/component.yaml
+  - path: samples/Project.sln
+    name: Project Android Starter
+    description: Shows how to use Akavache on Xamarin.Android.
+    configuration: Release|AnyCPU
+  - path: samples/Project-iOS.sln
+    name: Project iOS Starter
+    description: Shows how to use Project on Xamarin.iOS.
+   configuration: Release|iPhoneSimulator

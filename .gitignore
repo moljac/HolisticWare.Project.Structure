@@ -150,9 +150,8 @@ publish/
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
-# NuGet v3's project.json files produces more ignoreable files
-*.nuget.props
-*.nuget.targets
+#NuGet
+packages/
 
 # Microsoft Azure Build Output
 csx/
@@ -234,3 +233,128 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+#==============================================================================
+### Windows ###
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+#==============================================================================
+#Ignore email files delivered to specified pickup directory
+*.eml
+
+#Allow NuGet.exe (do not ignore)
+!NuGet.exe
+
+#Ignore WebDeploy publish profiles
+*.Publish.xml
+
+#Ignore Azure build csdef & Pubxml files
+ServiceDefinition.build.csdef
+*.azurePubxml
+
+#Allow ReSharper .DotSettings (for non-namespace-provider properties)
+!*.csproj.DotSettings
+
+#Ignore private folder
+/Private/
+
+#==============================================================================
+# SQL Server files
+App_Data/*.mdf
+App_Data/*.ldf
+
+*App_Data/*.mdf
+*App_Data/*.ldf
+
+#Visual Studio DB Project
+*.dbmdl
+[Ss]ql/
+
+
+
+#==============================================================================
+# HolisticWare
+#
+# http://www.gitignore.io/.
+#
+#	https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+#	http://stackoverflow.com/questions/2143956/gitignore-for-visual-studio-projects-and-solutions
+#	
+
+
+#----------------------------------------------
+# MacOSX
+**/*.DS_Store
+**/.DS_Store
+**/._*
+**/__MACOSX
+#----------------------------------------------
+
+**/.svn*
+**/.git.*
+**/.git.*/*
+
+**/Components/
+**/packages/
+
+#----------------------------------------------
+**/*.hidden.cs
+**/*.hidden.md
+**/*.hidden.sh
+**/*.hidden.bat
+**/*.hidden.cmd
+**/*.secure*.cs
+**/*.secure*.md
+**/*.secure*.sh
+**/*.secure*.bat
+**/*.secure*.cmd
+**/*.secret*.cs
+**/*.secret*.md
+**/*.secret*.sh
+**/*.secret*.bat
+*/*.secret*.cmd
+
+**/*.data.bat
+**/*.data.sh
+**/*.secure.data.md
+**/*.data.md
+**/*.secured.md
+**/*.secured.md
+**/*.secure*
+**/*.data.*
+
+# Xamarin Studio
+**/*.userprefs
+
+# Security (project id etc)
+#**/AndroidManifest.xml
+
+docs/workspace/sharpen/**
+
+src/samples/Components/**
+**/UpgradeLog.htm
+
+/docs/ubertesters.sdk.ios %
+
+
+#------------------------------------------
+# iOS build files
+**DerivedData**
+**build**
+lib/**
+#------------------------------------------
+#==============================================================================
